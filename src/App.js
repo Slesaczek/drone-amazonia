@@ -111,93 +111,93 @@ function App() {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen flex justify-center items-center">
-      <div className="p-10 bg-gray-900 text-white font-sans rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2 xl:h-1/2">
-        <h1 className="text-3xl md:text-2xl font-bold mb-4">
-          Input the coordinates:
-        </h1>
-        <form>
-          <div className="mb-2">
-            <label className="text-lg" htmlFor="droneStart">
-              Drone Start:
-            </label>
-            <select
-              className="block w-full p-2 bg-gray-800 text-gray-300 border border-gray-700 rounded"
-              id="droneStart"
-              name="droneStart"
-              value={state.droneStart}
-              onChange={handleInputChange}
+      <div className="bg-gray-100 min-h-screen flex justify-center items-center">
+        <div className="p-10 bg-gray-900 text-white font-sans rounded-lg shadow-lg lg:w-1/2 md:w-1/3 w-full">
+          <h1 className="text-3xl md:text-2xl font-bold mb-4">
+            Input the coordinates:
+          </h1>
+          <form>
+            <div className="mb-2">
+              <label className="text-lg" htmlFor="droneStart">
+                Drone Start:
+              </label>
+              <select
+                className="block w-full p-2 bg-gray-800 text-gray-300 border border-gray-700 rounded"
+                id="droneStart"
+                name="droneStart"
+                value={state.droneStart}
+                onChange={handleInputChange}
+              >
+                <option value="">Select a coordinate</option>
+                {state.boardCoordinates.map((coordinate) => (
+                  <option key={coordinate} value={coordinate}>
+                    {coordinate}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="mb-2">
+              <label className="text-lg" htmlFor="objectPickup">
+                Object Pickup:
+              </label>
+              <select
+                className="block w-full p-2 bg-gray-800 text-gray-300 border border-gray-700 rounded"
+                id="objectPickup"
+                name="objectPickup"
+                value={state.objectPickup}
+                onChange={handleInputChange}
+              >
+                <option value="">Select a coordinate</option>
+                {state.boardCoordinates.map((coordinate) => (
+                  <option key={coordinate} value={coordinate}>
+                    {coordinate}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="mb-2">
+              <label className="text-lg" htmlFor="deliveryDestination">
+                Delivery Destination:
+              </label>
+              <select
+                className="block w-full p-2 bg-gray-800 text-gray-300 border border-gray-700 rounded"
+                id="deliveryDestination"
+                name="deliveryDestination"
+                value={state.deliveryDestination}
+                onChange={handleInputChange}
+              >
+                <option value="">Select a coordinate</option>
+                {state.boardCoordinates.map((coordinate) => (
+                  <option key={coordinate} value={coordinate}>
+                    {coordinate}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <span>
+                Example: The set delivery will have the route A1-B1+B1-C1+
+                C1-C2+[...]+D4-F4+[...]+B7-B8 , and will take 1342 seconds to be
+                delivered as fast as possible.
+              </span>
+            </div>
+            <button
+              className="w-full bg-blue-500 mt-4 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+              type="button"
+              onClick={getAPIAndCalculate}
             >
-              <option value="">Select a coordinate</option>
-              {state.boardCoordinates.map((coordinate) => (
-                <option key={coordinate} value={coordinate}>
-                  {coordinate}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="mb-2">
-            <label className="text-lg" htmlFor="objectPickup">
-              Object Pickup:
-            </label>
-            <select
-              className="block w-full p-2 bg-gray-800 text-gray-300 border border-gray-700 rounded"
-              id="objectPickup"
-              name="objectPickup"
-              value={state.objectPickup}
-              onChange={handleInputChange}
-            >
-              <option value="">Select a coordinate</option>
-              {state.boardCoordinates.map((coordinate) => (
-                <option key={coordinate} value={coordinate}>
-                  {coordinate}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="mb-2">
-            <label className="text-lg" htmlFor="deliveryDestination">
-              Delivery Destination:
-            </label>
-            <select
-              className="block w-full p-2 bg-gray-800 text-gray-300 border border-gray-700 rounded"
-              id="deliveryDestination"
-              name="deliveryDestination"
-              value={state.deliveryDestination}
-              onChange={handleInputChange}
-            >
-              <option value="">Select a coordinate</option>
-              {state.boardCoordinates.map((coordinate) => (
-                <option key={coordinate} value={coordinate}>
-                  {coordinate}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <span>
-              Example: The set delivery will have the route A1-B1+B1-C1+
-              C1-C2+[...]+D4-F4+[...]+B7-B8 , and will take 1342 seconds to be
-              delivered as fast as possible.
-            </span>
-          </div>
-          <button
-            className="w-full py-2 px-4 text-white bg-blue-500 rounded hover:bg-blue-600 mt-4"
-            type="button"
-            onClick={getAPIAndCalculate}
-          >
-            Calculate route
-          </button>
-        </form>
-        {state.result && (
-          <div className="mt-4">
-            <h2 className="text-xl md:text-2xl font-semibold">Resultado:</h2>
-            <p className="text-white">{state.result} </p>
-          </div>
-        )}
-        <DeliveryHistory />
+              Calculate route
+            </button>
+          </form>
+          {state.result && (
+            <div className="mt-4">
+              <h2 className="text-xl md:text-2xl font-semibold">Resultado:</h2>
+              <p className="text-white">{state.result} </p>
+            </div>
+          )}
+          <DeliveryHistory />
+        </div>
       </div>
-    </div>
   );
 }
 
