@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import CalculateRoute from "./utils/CalculateRoute";
 import BoardService from "./Services/BoardService";
 import DeliveryHistoryService from "./Services/DeliveryHistoryService";
 import DeliveryHistory from "./Components/DeliveryHistory";
+import axios from "axios";
 
 function App() {
   const [state, setState] = useState({
