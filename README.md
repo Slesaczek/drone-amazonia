@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Amazonia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requisitos
 
-## Available Scripts
+- Node.js (versão 19.6.0)
+- npm (ou yarn)
 
-In the project directory, you can run:
+## Instalação
 
-### `npm start`
+1. Clone o repositório:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+git clone https://github.com/seu-usuario/seu-projeto.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalar dependências
 
-### `npm test`
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Iniciar projeto
 
-### `npm run build`
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Uso
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O sistema foi desenvolvido para atender às necessidades específicas de Géfersom Bejos, CEO da gigante brasileira de e-commerce Amazônia. A Amazônia contratou a ateliware para criar um novo sistema responsável por calcular a rota de entrega mais rápida para seu novo sistema de drones.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Objetivo
 
-### `npm run eject`
+Uma vez que o ponto de partida, o ponto de coleta de objetos e o ponto de entrega estão definidos, os drones da Amazônia devem chegar ao seu destino no menor tempo possível. A Amazônia já é uma empresa de tecnologia e, como parte de seus recursos, ela fornece um serviço que permite determinar o tempo necessário para se deslocar entre diferentes segmentos do percurso.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Como Usar
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para usar o sistema, siga as etapas abaixo:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Acesse o sistema no navegador.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Preencha os campos obrigatórios: "Drone Start" (Ponto de Partida), "Object Pickup" (Ponto de Coleta de Objetos) e "Delivery Destination" (Ponto de Entrega).
 
-## Learn More
+3. Clique no botão "Calcular Rota" para iniciar o cálculo da rota mais rápida.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. O sistema utilizará a tecnologia fornecida pela Amazônia para determinar o tempo estimado necessário para o drone percorrer a rota. O resultado será exibido na seção "Resultado".
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Explore as informações fornecidas para garantir que os drones da Amazônia cheguem ao destino o mais rápido possível.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Isso permitirá que a Amazônia otimize suas operações de entrega de forma eficiente e eficaz, oferecendo um serviço de entrega mais rápido e confiável para seus clientes.
