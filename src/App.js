@@ -111,7 +111,7 @@ function App() {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen min-w-full flex justify-center items-center">
+    <div className="bg-gray-100 min-h-screen flex justify-center items-center">
       <div className="p-10 bg-gray-900 text-white font-sans rounded-lg shadow-lg w-full md:w-2/3 lg:w-1/2 xl:h-1/2">
         <h1 className="text-3xl md:text-2xl font-bold mb-4">
           Input the coordinates:
